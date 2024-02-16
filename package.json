@@ -1,0 +1,21 @@
+{
+  "name": "nodejs2022",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/bin/www.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.9",
+    "ejs": "^3.1.9",
+    "express": "^4.18.1",
+    "express-session": "^1.18.0",
+    "mongoose": "^8.0.3",
+    "nodemon": "^2.0.19"
+  }
+}
