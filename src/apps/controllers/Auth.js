@@ -25,8 +25,8 @@ const postLogin = async (req, res) => {
   res.render("admin/login", { data: { error: error } });
 };
 
-const logout = async (req, res) => {
-  await req.session.destroy();
+const logout = (req, res) => {
+  req.session.destroy();
   res.redirect("/admin/login");
 };
 

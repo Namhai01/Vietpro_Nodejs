@@ -16,10 +16,22 @@ router.get("/admin/logout", AuthController.logout);
 router.get("/admin/dashboard", AuthMiddleware.checkRole, AdminController.index);
 
 // User
-router.get("/admin/users", UserController.index);
-router.get("/admin/users/create", UserController.create);
-router.get("/admin/users/edit/:id", UserController.edit);
-router.get("/admin/users/delete/:id", UserController.del);
+router.get("/admin/users", AuthMiddleware.checkRole, UserController.index);
+router.get(
+  "/admin/users/create",
+  AuthMiddleware.checkRole,
+  UserController.create
+);
+router.get(
+  "/admin/users/edit/:id",
+  AuthMiddleware.checkRole,
+  UserController.edit
+);
+router.get(
+  "/admin/users/delete/:id",
+  AuthMiddleware.checkRole,
+  UserController.del
+);
 // Category
 router.get("/admin/categories", CategoryController.index);
 router.get("/admin/categories/create", CategoryController.create);

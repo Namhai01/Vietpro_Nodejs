@@ -1,5 +1,5 @@
 const index = (req, res) => {
-  res.send("/admin/users");
+  res.render("admin/users/user");
 };
 const create = (req, res) => {
   res.send("/admin/users/create");
